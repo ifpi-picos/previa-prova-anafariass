@@ -1,9 +1,10 @@
 
 export function maiorNumero(lista){
-    if (lista.length === 0){
-        return [];
+    if (lista.length === 0 || !Array.isArray(lista)){
+        return null;
     }
-    return Math.max(lista)
+    
+    return Math.max(...lista)
 }
 
 export function verificarParOuImpar(numero){ 
@@ -11,26 +12,34 @@ export function verificarParOuImpar(numero){
         return null;  
     }
     if (numero % 2 === 0) {
-        return 'par';
+        return 'Par';
     } else {
-        return 'impar';
+        return 'Ímpar';
     }
 
 
 }
 
 export function contarCaracter(palavra,caractere){
+    if (typeof palavra !== 'string') {
+        return null; 
+    }
+
     let contar = 0
     let indic = 0
-    while(indic < palavra.length){
-        if (palavra[indic] === caractere){
+
+    const palavraM = palavra.toLowerCase();
+    const caractereMin = caractere.toLowerCase();
+
+    while(indic < palavraM.length){
+        if (palavraM[indic] === caractereMin){
             contar++
         }
         indic++
-    return contar
     }
+    return contar
 }
 
 export function atualizarPropriedade(){
 
-}
+} 

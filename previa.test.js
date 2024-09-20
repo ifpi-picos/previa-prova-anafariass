@@ -1,4 +1,11 @@
- 
+import { describe, it, expect } from "bun:test";
+import {
+  maiorNumero,
+  verificarParOuImpar,
+  contarCaracter,
+  atualizarPropriedade,
+} from './previa.js';
+
 // Teste para a função maiorNumero
 describe("maiorNumero", () => {
   it("deve retornar o maior número da lista", () => {
