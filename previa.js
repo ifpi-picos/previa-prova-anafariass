@@ -40,6 +40,11 @@ export function contarCaracter(palavra,caractere){
     return contar
 }
 
-export function atualizarPropriedade(){
-
+export function atualizarPropriedade(objeto, chave,novoValor){
+    if (objeto[chave] !== undefined){
+        objeto[chave] = novoValor;
+        return objeto;
+    }else {
+        return null;
+    }
 } 
